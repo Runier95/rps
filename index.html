@@ -24,6 +24,19 @@
         }
     }
 
+    function playerSelection() {
+      let choice=prompt("Rock, Paper, or Scissors?")
+      let lower=choice.toLowerCase()
+      if (lower==='rock') {
+        return 'Rock'
+      } else if (lower==='paper') {
+        return 'Paper'
+      } else if (lower==='scissors') {
+        return 'Scissors'
+      } else {
+        alert('Rock, Paper, or Scissors not chosen!')
+      }
+    }
     </script>
 </body>
 </html>
