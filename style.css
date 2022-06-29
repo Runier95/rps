@@ -1,0 +1,27 @@
+.box-ui {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+}
+
+#score {
+    height: 200px;
+    width: auto;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 20px;
+    flex: 0 0 auto;
+    gap: 30px;
+}
+
