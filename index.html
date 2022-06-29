@@ -5,82 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="box-ui">
+        <div id="score">
+            <div class="head1">Score</div>            
+        </div>
+        <div class="buttons">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>    
+        </div>
     <script>
-    let x=0
-    let y=0
-    let z=0
-    function random() {
-        return Math.floor(Math.random()*3);
-    }
 
-    function computerPlay() {
-        let r=random()
-        if (r===0) {
-            return 'Rock'
-        } else if (r===1) {
-            return 'Paper'
-        } else {
-            return 'Scissors'
-        }
-    }
-
-    function playerSelection() {
-      let choice=prompt("Rock, Paper, or Scissors?")
-      let lower=choice.toLowerCase()
-      if (lower==='rock') {
-        return 'Rock'
-      } else if (lower==='paper') {
-        return 'Paper'
-      } else if (lower==='scissors') {
-        return 'Scissors'
-      } else {
-        alert('Rock, Paper, or Scissors not chosen!')
-      }
-    }
-
-    function round() {
-        let player=playerSelection()
-        let pc=computerPlay()
-        if (pc===player) {
-            return 'tie'
-        } else if (player==='Paper' && pc==='Rock') {
-            return 'playerwins'
-        } else if (player==='Rock' && pc==='Scissors') {
-            return 'playerwins'
-        } else if (player==='Scissors' && pc==='Paper') {
-            return 'playerwins'
-        } else {
-            return 'pcwins'
-        }
-    }
-
-    function tally() {
-        let result=round()
-        if (result==='pcwins') {
-            ++y
-        } else if (result==="playerwins") {
-            ++x
-        } else if (result==='tie') {
-            ++z
-        }
-        alert('Score\n'+"Player-"+x+"\n"+"PC-"+y+"\n"+"Ties-"+z)
-    }
-
-    function game() {
-        x=0
-        y=0
-        z=0
-        for (let i=0; i<5; i++) {
-            tally()
-        }
-        if (x>y) {
-            alert("Player wins!\n"+"Player-"+x+"\n"+"PC-"+y+"\n"+"Ties-"+z)
-        } else if (y>x) {
-            alert("Player loses!\n"+"Player-"+x+"\n"+"PC-"+y+"\n"+"Ties-"+z)
-        } else {alert("Tie!\n"+"Player-"+x+"\n"+"PC-"+y+"\n"+"Ties-"+z)}
-    }
     </script>
 </body>
 </html>
